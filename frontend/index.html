@@ -1098,8 +1098,8 @@ const { parse: markedParse } = window.marked || {};
    ============================ */
 const API = (window.__PRD_CONFIG__ && window.__PRD_CONFIG__.API_BASE) || '/api/v1';
 const _wsPath = '/api/v1/ws/agent';
-const _wsHost = window.location.port === '8002' ? window.location.host : '106.55.55.54:8002';
-const WS_URL = (window.__PRD_CONFIG__ && window.__PRD_CONFIG__.WS_URL) || ((window.location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + _wsHost + _wsPath);
+const _wsHost = '106.55.55.54:8002';
+const WS_URL = (window.__PRD_CONFIG__ && window.__PRD_CONFIG__.WS_URL) || ('ws://' + _wsHost + _wsPath);
 
 /* ============================
    Utils
