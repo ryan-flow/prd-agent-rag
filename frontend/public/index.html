@@ -1097,8 +1097,9 @@ const { parse: markedParse } = window.marked || {};
    Constants
    ============================ */
 const API = (window.__PRD_CONFIG__ && window.__PRD_CONFIG__.API_BASE) || '/api/v1';
-const _wsPath = window.location.port === '8002' ? '/api/v1/ws/agent' : '/api/prd/v1/ws/agent';
-const WS_URL = (window.__PRD_CONFIG__ && window.__PRD_CONFIG__.WS_URL) || ((window.location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + window.location.host + _wsPath);
+const _wsPath = '/api/v1/ws/agent';
+const _wsHost = window.location.port === '8002' ? window.location.host : '106.55.55.54:8002';
+const WS_URL = (window.__PRD_CONFIG__ && window.__PRD_CONFIG__.WS_URL) || ((window.location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + _wsHost + _wsPath);
 
 /* ============================
    Utils
